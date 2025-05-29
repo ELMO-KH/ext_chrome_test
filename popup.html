@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .button {
+      background: #4285f4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .button:hover {
+      background: #3367d6;
+    }
+    .content {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .loading {
+      text-align: center;
+      color: #666;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>Web Reader & Translator</h3>
+  
+  <button id="extractBtn" class="button">Extract Page Content</button>
+  <button id="summarizeBtn" class="button">Summarize Content</button>
+  
+  <div>
+    <select id="languageSelect">
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+      <option value="de">German</option>
+      <option value="it">Italian</option>
+      <option value="pt">Portuguese</option>
+      <option value="zh">Chinese</option>
+      <option value="ja">Japanese</option>
+      <option value="ko">Korean</option>
+    </select>
+    <button id="translateBtn" class="button">Translate</button>
+  </div>
+  
+  <div id="content" class="content"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
